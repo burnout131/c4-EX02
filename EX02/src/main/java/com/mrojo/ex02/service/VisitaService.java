@@ -26,11 +26,11 @@ public class VisitaService {
 	}
 
 	public List<Visita> listVisitasByClientId(String dniCliente) {
-		return visitaDAO.findVisitaByClienteId(dniCliente);
+		return visitaDAO.findVisitaByClienteDni(dniCliente);
 	}
 
 	public List<Visita> listVisitasByDentistaId(String dniDentista) {
-		return visitaDAO.findVisitaByDentistaId(dniDentista);
+		return visitaDAO.findVisitaByDentistaDni(dniDentista);
 	}
 
 	public Visita saveVisita(Visita visita) {

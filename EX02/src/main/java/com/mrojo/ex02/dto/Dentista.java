@@ -35,8 +35,9 @@ public class Dentista {
 	
 	private String especialidad;
 
-	@OneToMany
-	@JoinColumn(name = "dentista")
+	//@OneToMany
+	//@JoinColumn(name = "dentista")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "dentista")
 	private List<Visita> visita;
 
 	public Dentista() {

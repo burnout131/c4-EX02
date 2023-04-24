@@ -33,8 +33,9 @@ public class Cliente {
 	
 	private String email;
 
-	@OneToMany
-	@JoinColumn(name = "cliente")
+	//@OneToMany
+	//@JoinColumn(name = "cliente")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
 	private List<Visita> visita;
 
 	public Cliente() {

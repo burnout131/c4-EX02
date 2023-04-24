@@ -30,11 +30,11 @@ public class Visita {
 
 	@ManyToOne
 	@JoinColumn(name = "dni_cliente")
-	private String dniCliente;
+	private Cliente cliente;
 
 	@ManyToOne
 	@JoinColumn(name = "dni_dentista")
-	private String dniDentista;
+	private Dentista dentista;
 
 	@Column(name = "descripcion")
 	private String descripcion;
@@ -49,11 +49,11 @@ public class Visita {
 	public Visita() {
 	}
 
-	public Visita(long id, String dniCliente, String dniDentista, String descripcion, LocalDateTime fechaHora,
+	public Visita(long id, Cliente cliente, Dentista dentista, String descripcion, LocalDateTime fechaHora,
 			double precio) {
 		this.id = id;
-		this.dniCliente = dniCliente;
-		this.dniDentista = dniDentista;
+		this.cliente = cliente;
+		this.dentista = dentista;
 		this.descripcion = descripcion;
 		this.fechaHora = fechaHora;
 		this.precio = precio;
@@ -67,20 +67,20 @@ public class Visita {
 		this.id = id;
 	}
 
-	public String getDniCliente() {
-		return dniCliente;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setDniCliente(String dniCliente) {
-		this.dniCliente = dniCliente;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
-	public String getDniDentista() {
-		return dniDentista;
+	public Dentista getDentista() {
+		return dentista;
 	}
 
-	public void setDniDentista(String dniDentista) {
-		this.dniDentista = dniDentista;
+	public void setDentista(Dentista dentista) {
+		this.dentista = dentista;
 	}
 
 	public String getDescripcion() {

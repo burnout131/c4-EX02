@@ -15,7 +15,7 @@ import com.mrojo.ex02.dto.Visita;
  */
 public interface VisitaDAO extends JpaRepository<Visita, Long> {
 
-	public List<Visita> findVisitaByClienteId(String dniCliente);
+	public List<Visita> findVisitaByClienteDni(String dniCliente);
 
-	public List<Visita> findVisitaByDentistaId(String dniDentista);
+	public List<Visita> findVisitaByDentistaDni(String dniDentista);
 }
